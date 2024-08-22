@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:elevation="12dp"
+    android:id="@+id/cardView"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginTop="2dp"
+    app:cardBackgroundColor="@color/background_orange"
+    app:cardCornerRadius="8dp"
+    app:strokeWidth="0.5dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/medicineViewImage"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_pill" />
+            <TextView
+                android:id="@+id/medicineViewMedicineName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/proxima_nova_medium"
+                android:layout_marginStart="10dp"
+                android:text="Medicine Name"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/medicineViewMedicinePower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/proxima_nova_medium"
+                android:text="Medicine Name"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

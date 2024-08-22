@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SetReminderActivity">
+
+    <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="18dp"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_btn"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/txtView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Your Reminders"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieView"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="25dp"
+                    app:lottie_loop="false"
+                    app:lottie_autoPlay="true"
+                    app:lottie_rawRes="@raw/alarm" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reminderTitleTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lottieView"
+                    android:layout_marginTop="25dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/black"
+                    android:layout_marginHorizontal="18dp"
+
+                    >
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/txtReminderTitle"
+                        android:imeOptions="actionNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:hint="Medicine Name"
+                        android:dropDownHeight="@dimen/dropdown_height"
+                        android:fontFamily="monospace"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/reminderMessageTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reminderTitleTextInputLayout"
+                    android:layout_marginTop="16dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/black"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    android:layout_marginHorizontal="18dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtReminderMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Medicine Description"
+                        android:imeOptions="actionDone"
+                        android:fontFamily="monospace"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout3"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/reminderMessageTextInputLayout"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSelectTime"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/light_orange"
+                        android:text="Select Time"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reminderMessageTextInputLayout"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/reminderMessageTextInputLayout"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSelectDay"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/light_orange"
+                        android:text="Select Dates"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:id="@+id/selectDoseInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout3"
+                    android:layout_marginTop="18dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/black"
+                    android:layout_marginHorizontal="18dp"
+
+                    >
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/txtNoOfDose"
+                        android:imeOptions="actionDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:hint="Select No Of Doses Per Day"
+                        android:dropDownHeight="@dimen/dropdown_height"
+                        android:fontFamily="monospace"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_below="@id/selectDoseInputLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linearLayoutScrollView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2.5"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtTimeView1"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="1st Dose"
+                                android:gravity="center"
+                                android:fontFamily="@font/proxima_nova_medium"
+                                android:textSize="18sp"
+                                />
+                            <EditText
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtPillQuantity1"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textAlignment="viewEnd"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                />
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dose"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/proxima_nova_medium"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linearLayoutScrollView2"
+                            android:layout_below="@id/linearLayoutScrollView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2.5"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtTimeView2"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="2nd Dose"
+                                android:gravity="center"
+                                android:fontFamily="@font/proxima_nova_medium"
+                                android:textSize="18sp"
+                                />
+                            <EditText
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtPillQuantity2"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textAlignment="viewEnd"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                />
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dose"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/proxima_nova_medium"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linearLayoutScrollView3"
+                            android:layout_below="@id/linearLayoutScrollView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2.5"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtTimeView3"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="3rd Dose"
+                                android:gravity="center"
+                                android:fontFamily="@font/proxima_nova_medium"
+                                android:textSize="18sp"
+                                />
+                            <EditText
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtPillQuantity3"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textAlignment="viewEnd"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                />
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dose"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/proxima_nova_medium"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linearLayoutScrollView4"
+                            android:layout_below="@id/linearLayoutScrollView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2.5"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtTimeView4"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="4th Dose"
+                                android:gravity="center"
+                                android:fontFamily="@font/proxima_nova_medium"
+                                android:textSize="18sp"
+                                />
+                            <EditText
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtPillQuantity4"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textAlignment="viewEnd"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                />
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dose"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/proxima_nova_medium"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linearLayoutScrollView5"
+                            android:layout_below="@id/linearLayoutScrollView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2.5"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtTimeView5"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="5th Dose"
+                                android:gravity="center"
+                                android:fontFamily="@font/proxima_nova_medium"
+                                android:textSize="18sp"
+                                />
+                            <EditText
+                                android:layout_margin="5dp"
+                                android:id="@+id/txtPillQuantity5"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textAlignment="viewEnd"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                />
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dose"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/proxima_nova_medium"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </ScrollView>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txtView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Is It Reccuring"
+                    android:layout_below="@id/linearLayout3"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="18dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textColor="@color/black"/>
+                <RadioGroup
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/txtView2"
+                    android:layout_marginHorizontal="22dp">
+
+                    <RadioButton
+                        android:id="@+id/btnRadioYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Yes"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/proxima_nova_medium"/>
+                    <RadioButton
+                        android:id="@+id/btnRadioNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="No"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/proxima_nova_medium"/>
+
+
+                </RadioGroup>
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/spinKit"
+                    style="@style/SpinKitView.CubeGrid"
+                    android:visibility="gone"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="16dp"
+                    app:SpinKit_Color="@color/light_orange"
+                    />
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSetReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@color/light_orange"
+        android:text="Set Reminder"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:textSize="22sp"
+        app:cornerRadius="8dp"
+        />
+    <FrameLayout
+            android:id="@+id/overlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/semiTransparent"
+            android:visibility="gone" />
+
+
+</RelativeLayout>

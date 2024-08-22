@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:text="Select Time"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearLayoutTimeDialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:weightSum="3.5"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTimeDialogSelectTime1"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_orange"
+            android:text="1st Dose"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/txtTimeDialogSelectedTime1"
+            android:layout_weight="2.0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text = "Selected Time"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="center_vertical"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearLayoutTimeDialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutTimeDialog1"
+        android:weightSum="3.5"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/btnTimeDialogSelectTime2"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_orange"
+            android:text="2nd Dose"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/txtTimeDialogSelectedTime2"
+            android:layout_weight="2.0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text = "Selected Time"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="center_vertical"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearLayoutTimeDialog3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutTimeDialog2"
+        android:weightSum="3.5"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTimeDialogSelectTime3"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_orange"
+            android:text="3rd Dose"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/txtTimeDialogSelectedTime3"
+            android:layout_weight="2.0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text = "Selected Time"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="center_vertical"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearLayoutTimeDialog4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutTimeDialog3"
+        android:weightSum="3.5"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTimeDialogSelectTime4"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_orange"
+            android:text="4th Dose"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/txtTimeDialogSelectedTime4"
+            android:layout_weight="2.0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text = "Selected Time"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="center_vertical"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearLayoutTimeDialog5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutTimeDialog4"
+        android:weightSum="3.5"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTimeDialogSelectTime5"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_orange"
+            android:text="5th Dose"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/txtTimeDialogSelectedTime5"
+            android:layout_weight="2.0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text = "Selected Time"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#ffad33</color>
+    <color name="invalid_input">#FF0000</color>
+    <color name="valid_input">#008000</color>
+    <color name="grey">#5A5A5A</color>
+    <color name="mustard">#ffdb58 </color>
+    <color name="orange">#ff4d01 </color>
+    <color name="background_orange">#f5f2f1</color>
+    <color name="light_orange">#F49336 </color>
+    <color name="app_theme">#F49336 </color>
+    <color name="semiTransparent">#80000000</color>
+    <color name="transparent">#FF000000</color>
+
+</resources>

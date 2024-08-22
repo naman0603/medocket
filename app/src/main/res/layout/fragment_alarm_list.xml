@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.AlarmListFragment">
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/appBarLayout">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_orange">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/txtView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Reminders"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    />
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/recyclerView" />
+
+
+
+
+
+    </LinearLayout>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spinKit"
+        style="@style/SpinKitView.CubeGrid"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:SpinKit_Color="@color/light_orange"
+        />
+    <FrameLayout
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semiTransparent"
+        android:visibility="gone" />
+</FrameLayout>
