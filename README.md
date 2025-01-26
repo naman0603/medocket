@@ -29,9 +29,8 @@ Libraries and Tools
 	•	Material Components: UI design framework
 	•	Glide: Image loading and caching library
 	•	JUnit and Espresso: For unit and UI testing
-
-Project Structure
-
+Project Structure 
+<pre>
 .
 ├── app/                   # Main application module
 │   ├── src/
@@ -50,7 +49,7 @@ Project Structure
 ├── build.gradle                             # Project-level Gradle settings
 ├── settings.gradle                          # Gradle project settings
 └── README.md                                # Project documentation
-
+</pre>
 Notable Directories
 	•	ui/: Contains activities, fragments, and view-related code following the MVVM architecture.
 	•	data/: Manages repositories and API integration for data handling.
