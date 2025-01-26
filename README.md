@@ -1,5 +1,3 @@
-Here is the finalized README file you can copy-paste directly:
-
 Medocket
 
 Description
